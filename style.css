@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+}
+
+.modal-header {
+    background-color: #222222;
+    color: white;
+}
+
+.modal-footer {
+    background-color: #222222;
+}
+
+.btn {
+    background-color: white;
+    color: #222222;
+}
+
+.udsolgt {
+    color: red;
+}
+
+.padding {
+    padding: none;
+}
+
+
+/*Slideshow*/
+
+.item img {
+    width: 100vw;
+}
+
+#slideshow .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#slideshow .col-xs-12,
+.col-sm-12,
+.col-md-12,
+.col-lg-12 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
