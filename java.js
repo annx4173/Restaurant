@@ -25,5 +25,14 @@
 
         klon.querySelector(".data_billede").src = "imgs/medium/" + produkt.billede + "-md.jpg";
 
+        if (produkt.udsolgt == false) {
+
+            var udsolgttekst = klon.querySelector(".udsolgttekst");
+            udsolgttekst.parentNode.removeChild(udsolgttekst);
+        }
+
+
+
+
         document.querySelector(".produktliste").appendChild(klon);
     }
