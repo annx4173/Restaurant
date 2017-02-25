@@ -98,23 +98,33 @@
     <!--  Slideshow slut -->
 
     <h1>MENU</h1>
-    <!--<template id="forretter">-->
     <div class="container margin">
 
         <div class="row">
             <h2>Forretter</h2>
-            <div class="col-sm-4 col-lg-4 col-md-4"><img class="img-responsive" src="imgs/medium/ringbroed-druer-md.jpg" alt="Ringbrød med druer">
-                <h4>Russisk ringbrød med vindruer</h4>
-                <h5><i>Russisk ringbrød af Karapatisk mel</i></h5>
-                <h5><SPAN STYLE="text-decoration:line-through">Pris - 39 KR</SPAN></h5>
-                <div class="rabatpris">
-                    <h5>Rabatpris - 19 KR</h5></div>
-                <button type="button" class="btn btn-primary modalknap" data-toggle="modal" data-target="#myModal1">
-                    Flere detaljer
-                </button>
-                <br>
 
-            </div>
+
+            <template id="produkt_template">
+                <div class="col-sm-4 col-lg-4 col-md-4" produkt><img class="img-responsive data_billede" src="imgs/medium/ringbroed-druer-md.jpg" alt="Ringbrød med druer">
+                    <h4 class="data_navn">DATA_NAVN</h4>
+                    <h5 class="kortbeskrivelse"><i><span class="data_kortbeskrivelse">DATA_KORTBESKRIVELSE</span></i></h5>
+                    <h5 class="pris">Pris - <span class="data_pris">DATA_PRIS</span> KR</h5>
+                    <!--- Sæt udsolgt class ved udsolgt -->
+
+                    <!-- SKAL KUN VISES VED RABATTER    -->
+                    <div class="rabatpris">
+                        <h5>Rabatpris - <span class="data_rabatpris">DATA_RABATPRIS</span></h5></div>
+                    <!-- SKAL KUN VISES VED udsolgte    -->
+                    <div class="udsolgttekst">
+                        <h4><b>UDSOLGT</b></h4></div>
+
+                    <button type="button" class="btn btn-primary modalknap" data-toggle="modal" data-target="#myModal1">
+                        Flere detaljer
+                    </button>
+                    <br>
+
+                </div>
+            </template>
             <!----/.colone --->
 
 

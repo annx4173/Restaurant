@@ -24,6 +24,10 @@ h1 {
     padding: none;
 }
 
+button.btn-primary {
+    background-color: aqua;
+}
+
 
 /*Slideshow*/
 
