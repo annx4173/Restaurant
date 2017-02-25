@@ -29,8 +29,16 @@
 
             var udsolgttekst = klon.querySelector(".udsolgttekst");
             udsolgttekst.parentNode.removeChild(udsolgttekst);
+        } else {
+            klon.querySelector(".pris").classList.add("udsolgt");
         }
 
+        if (produkt.udsolgt == true || produkt.rabatsats == 0) {
+            var rabatpris = klon.querySelector(".rabatpris");
+            rabatpris.parentNode.removeChild(rabatpris);
+        } else {
+            klon.querySelector(".pris").classList.add("rabat");
+        }
 
 
 
