@@ -1,8 +1,14 @@
-klon.querySelector(".data_navn").innerHTML = person.data;
+window.addEventListener("load", sidenVises);
 
-klon.querySelector(".data_rabatpris").innerHTML = produkt.pris * produkt.rabatsats / 100;
+function sidenVises() {
+    console.log("Siden vises")
+    visProdukt();
+}
 
-klon.querySelector(".data_billede").src = "/imgs/small/" + produkt.billede + "-sm.jpg";
-
-
-$.getJSON("HJEMMESIDE LINKET", visProduktListe);
+function visProdukt() {
+    //Klon produkt_template
+    var klon = document.querySelector("#produkt_template").content.cloneNode(true);
+    //indsæt data i klon
+    //append klon til .produkt_liste
+    document.querySelector(".produktliste").appendChild(klon);
+}
