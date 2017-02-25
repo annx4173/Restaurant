@@ -1,24 +1,29 @@
-window.addEventListener("load", sidenVises);
+    window.addEventListener("load", sidenVises);
 
-function sidenVises() {
-    console.log("Siden vises")
+    function sidenVises() {
+        console.log("Siden vises")
 
-    // Læs produktliste
-    $.getJSON("http://petlatkea.dk/2017/dui/api/productlist?callback=?", visProduktListe);
 
-    visProdukt();
-}
+        $.getJSON("http://petlatkea.dk/2017/dui/api/productlist?callback=?", visProduktListe);
 
-function visProduktListe(listen) {
-    console.table(listen);
-    listen.forEach(visProdukt);
-}
+    }
 
-//Klon produkt_template
-function visProdukt(produkt) {
-    console.log(produkt);
-    var klon = document.querySelector("#produkt_template").content.cloneNode(true);
-    //indsæt data i klon
-    //append klon til .produkt_liste
-    document.querySelector(".produktliste").appendChild(klon);
-}
+    function visProduktListe(listen) {
+        console.table(listen);
+        listen.forEach(visProdukt);
+    }
+
+    function visProdukt(produkt) {
+        console.log(produkt);
+        var klon = document.querySelector("#produkt_template").content.cloneNode(true);
+
+        klon.querySelector(".data_navn").innerHTML = produkt.navn;
+        klon.querySelector(".data_pris").innerHTML = produkt.pris;
+
+        document.querySelector(".produktliste").appendChild(klon);
+    }
+
+
+    var rabatpris = Math.ceil(produkt.pris - (produkt.pris * produkt.rabatsats / 100));
+    klon.querySelector(".data_rabatpris").innerHTML = rabatpris;
+    //    append klon til.produkt_liste
